@@ -1,8 +1,6 @@
-function closeheader(){
-
-    $('.test-h').toggle(300);
-
-  };
+$(document).ready(function(){
+        $('#img-zoom').zoom();
+    });
 
 
 

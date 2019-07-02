@@ -19,11 +19,11 @@
                             </div>
                             <div class="form-group">
                                 <label>Mô tả</label>
-                                <textarea class="form-control" rows="3" name="description_vi" placeholder="Nhập mô tả sản phẩm"></textarea>
+                                <textarea class="form-control ckeditor" rows="3" name="description_vi" placeholder="Nhập mô tả sản phẩm"></textarea>
                             </div>
                             <div class="form-group">
                                 <label>Nội dung</label>
-                                <textarea class="form-control" rows="3" name="content_vi" placeholder="Nhập Nội dung"></textarea>
+                                <textarea class="form-control ckeditor" rows="3" name="content_vi" placeholder="Nhập Nội dung"></textarea>
                             </div>
                             <div class="form-group">
                                 <label>Ảnh  BAI VIET</label>

@@ -5,13 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Slide;
 Use App\New1;
+use Session;
 class NewController extends Controller
 {
 	public function news()
 	{
 		// dd('ffs');
 	$slides = Slide::all();
-    $news = New1::all();
+    $news = New1::paginate(6);
     // dd('fsfs');
     return view('page.news',compact('slides','news'));	
 	}
@@ -22,7 +23,7 @@ class NewController extends Controller
         // Kiểm tra Session của sản phẩm có tồn tại hay không.
         // Nếu không tồn tại, sẽ tự động tăng trường view_count lên 1 đồng thời tạo session lưu trữ key sản phẩm.
         if (!Session::has($newstKey)) {
-            Product::where('id', $id)->increment('luotxem');
+            New1::where('id', $id)->increment('luotxem');
             Session::put($newstKey, 1);
         }
 

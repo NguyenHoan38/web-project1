@@ -19,30 +19,41 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('master','PageController@master')->name('master');
-Route::get('index','PageController@index')->name('index');
+Route::get('index','PageController@index')->middleware('locale')->name('index');
 Route::get('product','ProductController@product')->name('product');
 Route::get('news','NewController@news')->name('news');
 Route::get('news/{id}','NewController@detail')->name('detail_news');
 Route::get('product/{id}','ProductController@detail')->name('detailproduct');
-
+Route::get('lienhe','PageController@lienhe')->name('lienhe');
+Route::get('thuonghieu','PageController@thuonghieu')->name('thuonghieu');
+Route::get('timkiem','PageController@timkiem')->name('timkiem');
+Route::get('change-language/{language}','PageController@changelanguage')->name('change-language');
 // admin
-Route::get('admin/product','AdminContronller@admin');
-Route::get('admin/product/add','AdminContronller@getaddproduct');
-Route::post('admin/product/add','AdminContronller@postaddproduct')->name('addproduct');
-Route::get('admin/product/edit/{id}','AdminContronller@geteditproduct');
-Route::post('admin/product/edit/{id}','AdminContronller@posteditproduct')->name('editproduct');
-Route::get('admin/product/delete/{id}','AdminContronller@deleteproduct')->name('deleteproduct');
+Route::group(['prefix'=>'admin',],function(){
+	Route::group(['prefix'=>'product'],function(){
+		Route::get('/','AdminContronller@admin');	
+		Route::get('/add','AdminContronller@getaddproduct');
+		Route::post('/add','AdminContronller@postaddproduct')->name('addproduct');
+		Route::get('/edit/{id}','AdminContronller@geteditproduct');
+		Route::post('/edit/{id}','AdminContronller@posteditproduct')->name('editproduct');
+		Route::get('/delete/{id}','AdminContronller@deleteproduct')->name('deleteproduct');
+	});
 // slide
-Route::get('admin/slide','AdminContronller@slide');
-Route::get('admin/slide/add','AdminContronller@getaddslide');
-Route::post('admin/slide/add','AdminContronller@postaddslide')->name('addslide');
-Route::get('admin/slide/edit/{id}','AdminContronller@geteditslide');
-Route::post('admin/slide/edit/{id}','AdminContronller@posteditslide')->name('editslide');
-Route::get('admin/slide/delete/{id}','AdminContronller@deleteslide')->name('deleteslide');
+	Route::group(['prefix'=>'slide'],function(){
+		Route::get('/','AdminContronller@slide');
+		Route::get('/add','AdminContronller@getaddslide');
+		Route::post('/add','AdminContronller@postaddslide')->name('addslide');
+		Route::get('/edit/{id}','AdminContronller@geteditslide');
+		Route::post('/edit/{id}','AdminContronller@posteditslide')->name('editslide');
+		Route::get('/delete/{id}','AdminContronller@deleteslide')->name('deleteslide');
+	});
 //news
-Route::get('admin/news','AdminContronller@news');
-Route::get('admin/news/add','AdminContronller@getaddnews');
-Route::post('admin/news/add','AdminContronller@postaddnews')->name('addnews');
-Route::get('admin/news/edit/{id}','AdminContronller@geteditnews');
-Route::post('admin/news/edit/{id}','AdminContronller@posteditnews')->name('editnews');
-Route::get('admin/news/delete/{id}','AdminContronller@deletenews')->name('deletenews');
+	Route::group(['prefix'=>'news'],function(){
+		Route::get('/','AdminContronller@news');
+		Route::get('/add','AdminContronller@getaddnews');
+		Route::post('/add','AdminContronller@postaddnews')->name('addnews');
+		Route::get('/edit/{id}','AdminContronller@geteditnews');
+		Route::post('/edit/{id}','AdminContronller@posteditnews')->name('editnews');
+		Route::get('/delete/{id}','AdminContronller@deletenews')->name('deletenews');
+	});
+});

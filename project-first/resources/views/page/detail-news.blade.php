@@ -16,7 +16,7 @@
     			@foreach ($news_nb as $nbt)
 	    		<div class="sidebar-content">
 	    			<div class="row">
-	    				<div class="col-lg-3"><img src="project1/images/{{$nbt->hinh}}" width="100%" height="170px"></div>
+	    				<div class="col-lg-3"><a href="{{route('detail_news',$nbt->id)}}"><img src="project1/images/{{$nbt->hinh}}" width="100%" height="170px"></a></div>
 	    				<div class="col-lg-9 sidebar-content-text ">
 	    					<h4>{{$nbt->tieude}}</h4>
 	    					<span>Đăng lúc:{{$nbt->created_at}}</span>
@@ -27,7 +27,7 @@
 	    		</div>
 	    		@endforeach
  			@endif
-    			
+    	
     		</div>    		    		
     	</div>
     </div>

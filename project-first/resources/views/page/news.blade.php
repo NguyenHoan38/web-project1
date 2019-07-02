@@ -21,6 +21,14 @@
 		                        </div>
 		                        @endforeach
   						@endif
+
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-lg-12">
+                            <ul class="pagination" >
+                             {{ $news->links()}}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

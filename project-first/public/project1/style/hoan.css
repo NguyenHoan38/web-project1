@@ -56,7 +56,7 @@ ul,ol,li,a{list-style: none;padding:0;text-decoration: none;}
 	border: 1px solid #E9E9E9;
 	background: red;
 	margin:20px auto;
-	display: none;
+	/*display: none;*/
 
 
 	
@@ -190,7 +190,7 @@ ul,ol,li,a{list-style: none;padding:0;text-decoration: none;}
 	border: 1px solid #E9E9E9;
 	background: red;
 	margin:20px auto;
-	display: none;
+	/*display: none;*/
 
 
 	
@@ -620,9 +620,7 @@ ul,ol,li,a{list-style: none;padding:0;text-decoration: none;}
 	.card-h{
 		height: 530px;
 	}
-	input{
-		width:78%;
-	}
+
 	.badge-pill{
 		margin-right: 1px;
 		margin-left: 1px;
@@ -646,7 +644,7 @@ ul,ol,li,a{list-style: none;padding:0;text-decoration: none;}
     font-size: 18px;
     font-weight: 700;
 }
-.icon-responsive-h{
+.icon-responsive-h{	
 	color: #fff;
 	cursor: pointer;
 }
@@ -666,7 +664,7 @@ ul,ol,li,a{list-style: none;padding:0;text-decoration: none;}
 	transition: left .2s;
 	z-index: 10000;
 	border-right: 1px solid rgba(255,255,255,.2);
-	display: none;
+	/*display: none;*/
 }
 .test1-h{
 	 left: 0;

@@ -14,6 +14,13 @@
 		          </div>
 		        @endforeach  
           @endif
+          <div class="row text-center col-lg-12">
+              <div class="col-lg-12">
+                  <ul class="pagination" >
+                   {{ $products->links()}}
+                  </ul>
+              </div>
+          </div>
         </div>
       </div> <!-- dong the container -->
     </section>	  

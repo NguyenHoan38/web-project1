@@ -13,8 +13,8 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CYanone+Kaffeesatz:200,300,400,700" rel="stylesheet">
         <link rel="shortcut icon" href="project1/images/fav-icon.png">
         <!-- css của các thành viên -->
-        <link rel="stylesheet" type="text/css" href="project1/css/thinh.css" media="all" />
-        <link rel="stylesheet" type="text/css" href="project1/css/hoan.css" media="all" />
+        {{-- <link rel="stylesheet" type="text/css" href="project1/css/thinh.css" media="all" /> --}}
+      
         <link rel="stylesheet" type="text/css" href="project1/css/dat.css" media="all" />
         <link rel="stylesheet" type="text/css" href="project1/style/style.css">
         <!-- Script -->

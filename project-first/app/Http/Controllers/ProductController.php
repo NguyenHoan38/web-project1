@@ -11,7 +11,7 @@ class ProductController extends Controller
    public function product()
    {
     $slides = Slide::all();
-   	$products = Product::all();
+   	$products = Product::paginate(3);
    	return view('page.product',compact('products','slides'));
    }
    public function detail($id)
