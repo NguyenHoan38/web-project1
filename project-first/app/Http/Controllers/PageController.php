@@ -16,7 +16,7 @@ class PageController extends Controller
    public function index()
    {
    	$slides = Slide::all();
-     var_dump(Session::get('website_language'));
+     // var_dump(Session::get('website_language'));
    	$products = Product::orderBY('id','desc')->take(4)->get();
   	$news = New1::orderBY('id','desc')->paginate(4);
     $news_view = New1::orderBY('luotxem','desc')->take(1)->get();
